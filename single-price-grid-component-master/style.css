@@ -1,0 +1,214 @@
+.card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  width: 65rem;
+  margin: 4rem;
+  -webkit-box-shadow: 0 5px 15px rgba(1, 1, 1, 0.2);
+          box-shadow: 0 5px 15px rgba(1, 1, 1, 0.2);
+  border-radius: 1rem;
+  -webkit-animation-name: moveInBottom;
+          animation-name: moveInBottom;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 640px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 39rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .card {
+    font-size: 45%;
+  }
+}
+
+.card__section {
+  padding: 4rem;
+  color: white;
+}
+
+.card__section h2 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.card__section_join {
+  grid-column: 1  / -1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  background-color: white;
+}
+
+.card__section_join h1 {
+  margin-bottom: 2rem;
+  color: var(--color-cyan);
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.card__section_join h2 {
+  margin-bottom: 1.6rem;
+  color: var(--color-bright-yellow);
+  font-weight: 400;
+}
+
+.card__section_join p {
+  color: var(--color-greyish-blue);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.card__section__price {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  grid-row: 2 / -1;
+  background-color: var(--color-cyan);
+}
+
+.card__section__price h2 {
+  margin-bottom: 1rem;
+}
+
+.card__section__price .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: .6rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+}
+
+.card__section__price .price span {
+  margin-right: 1.6rem;
+  font-family: 'Karla', sans-serif;
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+
+.card__section__price .feature {
+  margin-bottom: 3rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.card__section__price button {
+  width: 100%;
+  padding: 1.8rem;
+  border: none;
+  border-radius: .6rem;
+  -webkit-box-shadow: 0 5px 15px rgba(1, 1, 1, 0.2);
+          box-shadow: 0 5px 15px rgba(1, 1, 1, 0.2);
+  background-color: var(--color-bright-yellow);
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.card__section__price button:hover {
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
+  background-color: #afcc2e;
+}
+
+.card__section__price button:active {
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+  background-color: #96ac35;
+}
+
+.card__section__price button a {
+  color: white;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+
+.card__section__features {
+  grid-column: 2 / -1;
+  grid-row: 2 / -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--color-cyan-lighter);
+}
+
+.card__section__features ul {
+  list-style: none;
+}
+
+.card__section__features ul li {
+  line-height: 1.5;
+  font-size: 1.4rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+
+:root {
+  --color-cyan:  hsl(179, 62%, 43%);
+  --color-cyan-lighter: hsl(179, 47%, 52%);
+  --color-bright-yellow: hsl(71, 73%, 54%);
+  --color-light-gray: hsl(204, 43%, 93%);
+  --color-greyish-blue: hsl(218, 22%, 67%);
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 50%;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-light-gray);
+  font-family: 'Karla', sans-serif;
+}
+/*# sourceMappingURL=style.css.map */

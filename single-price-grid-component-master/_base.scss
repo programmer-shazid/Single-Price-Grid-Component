@@ -1,0 +1,23 @@
+:root {
+    --color-cyan:  hsl(179, 62%, 43%);
+    --color-cyan-lighter: hsl(179, 47%, 52%);
+    --color-bright-yellow: hsl(71, 73%, 54%);
+    --color-light-gray: hsl(204, 43%, 93%);
+    --color-greyish-blue: hsl(218, 22%, 67%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 50%;
+}
+
+*,
+*::before,
+*::after  {
+      box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
